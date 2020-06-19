@@ -1,18 +1,15 @@
 import React, {FC} from "react";
 
 interface ExpenseItemProps {
-    expenseItem: {
-        name: string;
-        description: string;
-        amount: number;
-    }
+    expenseItem: ExpenseItem;
 }
+
 export const ExpenseItem: FC<ExpenseItemProps> = ({ expenseItem }) => {
     return (
-        <div>
-            <div className="expense-item-name">{expenseItem.name}</div>
+        <li>
+            <label className="expense-item-name">{expenseItem.name}</label>
             <div className="expense-item-description">{expenseItem.description}</div>
             <div className="expense-item-amount">{expenseItem.amount}</div>
-        </div>
+        </li>
     )
 }
